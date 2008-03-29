@@ -24,10 +24,6 @@ done.
 
 == Installation ==
 
-This section describes how to install the plugin and get it working.
-
-e.g.
-
 1. Copy fdfeedburner.php into wp-content/plugins
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Configure your feed from the new Feedburner submenu
