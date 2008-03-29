@@ -31,8 +31,3 @@ e.g.
 1. Copy fdfeedburner.php into wp-content/plugins
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Configure your feed from the new Feedburner submenu
-
-== Frequently Asked Questions ==
-
-== Screenshots ==
-
