@@ -3,7 +3,7 @@ Contributors: fd
 Donate link: http://flagrantdisregard.com/feedburner/
 Tags: feedburner, redirect, rss, feed
 Requires at least: 2.0
-Tested up to: 2.3.3
+Tested up to: 2.5
 Stable tag: trunk
 
 This plugin redirects the main feed and optionally the comments feed to
