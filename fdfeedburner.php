@@ -4,7 +4,7 @@ Plugin Name: FD Feedburner Plugin
 Plugin URI: http://flagrantdisregard.com/feedburner/
 Description: Redirects all feeds to a Feedburner feed
 Author: John Watson
-Author URI: http://flagrantdisregard.com/feedburner/
+Author URI: http://flagrantdisregard.com/
 Version: 1.2
 
 Copyright (C) Sat Feb 18 2006 John Watson
