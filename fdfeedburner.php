@@ -5,7 +5,7 @@ Plugin URI: http://flagrantdisregard.com/feedburner/
 Description: Redirects all feeds to a Feedburner feed
 Author: John Watson
 Author URI: http://flagrantdisregard.com/
-Version: 1.3
+Version: 1.31
 
 Copyright (C) Sat Feb 18 2006 John Watson
 john@flagrantdisregard.com
@@ -33,7 +33,7 @@ add_action('admin_menu', 'feedburner_config_page');
 function feedburner_config_page() {
 	global $wpdb;
 	if ( function_exists('add_submenu_page') )
-		add_submenu_page('plugins.php', __('Feedburner Configuration'), __('Feedburner Configuration'), 1, __FILE__, 'feedburner_conf');
+		add_submenu_page('plugins.php', __('Feedburner Configuration'), __('Feedburner Configuration'), 8, __FILE__, 'feedburner_conf');
 }
 
 function feedburner_fix_url($url) {
