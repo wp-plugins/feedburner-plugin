@@ -23,3 +23,8 @@ done.
 1. Copy fdfeedburner.php into wp-content/plugins
 1. Activate the plugin through the 'Plugins' menu in WordPress
 1. Configure your feed from the new Feedburner submenu
+
+== Changelog ==
+
+= 1.41 =
+* Added option to not redirect search result feeds

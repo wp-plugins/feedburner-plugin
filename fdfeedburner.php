@@ -5,7 +5,7 @@ Plugin URI: http://flagrantdisregard.com/feedburner/
 Description: Redirects all feeds to a Feedburner feed
 Author: John Watson
 Author URI: http://flagrantdisregard.com/
-Version: 1.4
+Version: 1.41
 
 Copyright (C) Sat Feb 18 2006 John Watson
 john@flagrantdisregard.com
@@ -45,10 +45,12 @@ function feedburner_fix_url($url) {
 
 function feedburner_conf() {
 	$options = get_option('fd_feedburner');
+
 	if (!isset($options['feedburner_url'])) $options['feedburner_url'] = null;
 	if (!isset($options['feedburner_comment_url'])) $options['feedburner_comment_url'] = null;
 	if (!isset($options['feedburner_append_cats'])) $options['feedburner_append_cats'] = 0;
 	if (!isset($options['feedburner_no_cats'])) $options['feedburner_no_cats'] = 0;
+	if (!isset($options['feedburner_no_search'])) $options['feedburner_no_search'] = 0;
 	
 	$updated = false;
 	if ( isset($_POST['submit']) ) {
@@ -80,10 +82,17 @@ function feedburner_conf() {
 			$feedburner_no_cats = 0;
 		}
 		
+		if (isset($_POST['feedburner_no_search'])) {
+			$feedburner_no_search = $_POST['feedburner_no_search'];
+		} else {
+			$feedburner_no_search = 0;
+		}
+		
 		$options['feedburner_url'] = $feedburner_url;
 		$options['feedburner_comment_url'] = $feedburner_comment_url;
 		$options['feedburner_append_cats'] = $feedburner_append_cats;
 		$options['feedburner_no_cats'] = $feedburner_no_cats;
+		$options['feedburner_no_search'] = $feedburner_no_search;
 		
 		update_option('fd_feedburner', $options);
 		
@@ -124,6 +133,10 @@ if ($updated) {
 	<input id="feedburner_append_cats" name="feedburner_append_cats" type="checkbox" value="1"<?php if ($options['feedburner_append_cats']==1) echo ' checked'; ?> />
 	<label for="feedburner_append_cats"><?php _e('Append category/tag to URL for category/tag feeds'); ?> (<i>http://url<b>_category</b></i>)</label>
 </p>
+<p>
+	<input id="feedburner_no_search" name="feedburner_no_search" type="checkbox" value="1"<?php if ($options['feedburner_no_search']==1) echo ' checked'; ?> />
+	<label for="feedburner_no_search"><?php _e('Do not redirect search result feeds'); ?></label>
+</p>
 
 <p class="submit" style="text-align: left"><input type="submit" name="submit" value="<?php _e('Save &raquo;'); ?>" /></p>
 </form>
@@ -146,6 +159,7 @@ function feedburner_redirect() {
 	if (!isset($options['feedburner_comment_url'])) $options['feedburner_comment_url'] = null;
 	if (!isset($options['feedburner_append_cats'])) $options['feedburner_append_cats'] = 0;
 	if (!isset($options['feedburner_no_cats'])) $options['feedburner_no_cats'] = 0;
+	if (!isset($options['feedburner_no_search'])) $options['feedburner_no_search'] = 0;
 	$feed_url = $options['feedburner_url'];
 	$comment_url = $options['feedburner_comment_url'];
 	if ($feed_url == null && $comment_url == null) return;
@@ -176,6 +190,12 @@ function feedburner_redirect() {
 		$feed_url .= '_'.$tag;
 	}
 
+	// Get search terms
+	$search = null;
+	if ($wp->query_vars['s'] != null) {
+		$search = $wp->query_vars['s'];
+	}
+
 	// Redirect comment feed
 	if ($feed == 'comments-rss2' || is_single() || $withcomments) {
 		if ($comment_url != null) {
@@ -192,6 +212,8 @@ function feedburner_redirect() {
 			case 'atom':
 				if (($cat || $tag) && $options['feedburner_no_cats'] == 1) {
 					// If this is a category/tag feed and redirect is disabled, do nothing
+				} else if ($search && $options['feedburner_no_search'] == 1) {
+					// If this is a search result feed and redirect is disabled, do nothing
 				} else {
 					if ($feed_url != null) {
 						// Redirect the feed
