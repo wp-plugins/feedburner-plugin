@@ -26,5 +26,8 @@ done.
 
 == Changelog ==
 
+= 1.42 =
+* Localized configuration panel, added Hungarian translation thanks to Sepp Toth.
+
 = 1.41 =
 * Added option to not redirect search result feeds
