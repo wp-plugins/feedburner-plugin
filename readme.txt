@@ -28,6 +28,7 @@ done.
 
 = 1.42 =
 * Localized configuration panel, added Hungarian translation thanks to Sepp Toth.
+* German translation by Linus Metzler (limenet.ch)
 
 = 1.41 =
 * Added option to not redirect search result feeds
