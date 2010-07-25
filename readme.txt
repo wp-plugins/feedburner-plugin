@@ -18,6 +18,9 @@ existing feeds simply become Feedburner feeds seamlessly and transparently for
 all users. Just tell the plugin what your Feedburner feed URL is and you're
 done.
 
+Translators: Use the .pot file in the languages/ folder. Email .po files
+(only) to me for inclusion in the plugin. Thank you!
+
 == Installation ==
 
 1. Copy fdfeedburner.php into wp-content/plugins
@@ -29,6 +32,7 @@ done.
 = 1.42 =
 * Localized configuration panel, added Hungarian translation thanks to Sepp Toth.
 * German translation by Linus Metzler (limenet.ch)
+* Brazilian Portuguese translation by Gervásio Antônio
 
 = 1.41 =
 * Added option to not redirect search result feeds
