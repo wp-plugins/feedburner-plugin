@@ -31,8 +31,9 @@ Translators: Use the .pot file in the languages/ folder. Email .po files
 
 = 1.42 =
 * Localized configuration panel, added Hungarian translation thanks to Sepp Toth.
-* German translation by Linus Metzler (limenet.ch)
+* German translation by Linus Metzler (http://limenet.ch)
 * Brazilian Portuguese translation by Gervásio Antônio
+* Dutch translation by Pieter (http://www.pieterc.be)
 
 = 1.41 =
 * Added option to not redirect search result feeds
