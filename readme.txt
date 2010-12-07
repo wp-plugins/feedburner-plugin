@@ -35,6 +35,7 @@ Translators: Use the .pot file in the languages/ folder. Email .po files
 * Brazilian Portuguese translation by Gervásio Antônio
 * Dutch translation by Pieter (http://www.pieterc.be)
 * Italian translation by Guter
+* French translation by liryk (http://liryk.lautre.net/)
 
 = 1.41 =
 * Added option to not redirect search result feeds
