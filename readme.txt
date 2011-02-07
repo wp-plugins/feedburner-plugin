@@ -29,6 +29,9 @@ Translators: Use the .pot file in the languages/ folder. Email .po files
 
 == Changelog ==
 
+= 1.43 =
+* Added nonce verification patch from Ulf Härnhammar <ulfharn@gmail.com>
+
 = 1.42 =
 * Localized configuration panel, added Hungarian translation thanks to Sepp Toth.
 * German translation by Linus Metzler (http://limenet.ch)
