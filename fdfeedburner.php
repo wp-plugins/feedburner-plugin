@@ -63,7 +63,7 @@ function feedburner_conf() {
 	
 	$updated = false;
 	if ( isset($_POST['submit']) ) {
-		check_admin_referer();
+		check_admin_referer('fdfeedburner', 'fdfeedburner-admin');
 		
 		if (isset($_POST['feedburner_url'])) {
 			$feedburner_url = $_POST['feedburner_url'];
@@ -145,7 +145,7 @@ if ($updated) {
 	<label for="feedburner_no_search"><?php _e('Do not redirect search result feeds', FDFEEDBURNER_TEXTDOMAIN); ?></label>
 </p>
 
-<p class="submit" style="text-align: left"><input type="submit" name="submit" value="<?php _e('Save', FDFEEDBURNER_TEXTDOMAIN); ?> &raquo;" /></p>
+<p class="submit" style="text-align: left"><?php wp_nonce_field('fdfeedburner', 'fdfeedburner-admin'); ?><input type="submit" name="submit" value="<?php _e('Save', FDFEEDBURNER_TEXTDOMAIN); ?> &raquo;" /></p>
 </form>
 </div>
 <?php
