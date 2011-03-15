@@ -29,6 +29,12 @@ Translators: Use the .pot file in the languages/ folder. Email .po files
 
 == Changelog ==
 
+= 1.44 =
+* Fixed compatibility issue with Google Webmaster Tools.
+Avoid redirecting Googlebot to avoid sitemap feeds issues
+(http://www.google.com/support/feedburner/bin/answer.py?hl=en&answer=97090).
+Patch contributed by Ivan Yarych.
+
 = 1.43 =
 * Added nonce verification (security) patch from Ulf Härnhammar <ulfharn@gmail.com>
 

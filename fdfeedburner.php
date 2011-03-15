@@ -5,7 +5,7 @@ Plugin URI: http://flagrantdisregard.com/feedburner/
 Description: Redirects all feeds to a Feedburner feed
 Author: John Watson
 Author URI: http://flagrantdisregard.com/
-Version: 1.43
+Version: 1.44
 
 Copyright (C) Sat Feb 18 2006 John Watson
 john@flagrantdisregard.com
@@ -159,6 +159,10 @@ function feedburner_redirect() {
 	
 	// Do nothing if feedburner is the user-agent
 	if (preg_match('/feedburner/i', $_SERVER['HTTP_USER_AGENT'])) return;
+	
+	// Avoid redirecting Googlebot to avoid sitemap feeds issues
+	// http://www.google.com/support/feedburner/bin/answer.py?hl=en&answer=97090
+	if (preg_match('/googlebot/i', $_SERVER['HTTP_USER_AGENT'])) return;
 	
 	// Do nothing if not configured
 	$options = get_option('fd_feedburner');
