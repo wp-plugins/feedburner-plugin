@@ -3,7 +3,7 @@ Contributors: fd
 Donate link: http://flagrantdisregard.com/feedburner/
 Tags: feedburner, redirect, rss, feed
 Requires at least: 2.0
-Tested up to: 3.1.1
+Tested up to: 3.2.1
 Stable tag: trunk
 
 Redirects the main feed and optionally the comments feed seamlessly and
@@ -28,6 +28,11 @@ Translators: Use the .pot file in the languages/ folder. Email .po files
 1. Configure your feed from the new Feedburner submenu
 
 == Changelog ==
+
+= 1.45 =
+* Moved options to Settings menu
+* Fixed deprecated permission settings (caused deprecated notices)
+Hat tip: Ben Gillbanks (http://twitter.com/binarymoon)
 
 = 1.44 =
 * Fixed compatibility issue with Google Webmaster Tools.
