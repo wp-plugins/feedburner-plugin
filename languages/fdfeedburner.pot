@@ -16,7 +16,11 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: fdfeedburner.php:43 fdfeedburner.php:44 fdfeedburner.php:120
+#: fdfeedburner.php:43 fdfeedburner.php:44
+msgid "Feedburner"
+msgstr ""
+
+#: fdfeedburner.php:120
 msgid "Feedburner Configuration"
 msgstr ""
 
