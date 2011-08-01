@@ -33,6 +33,7 @@ Translators: Use the .pot file in the languages/ folder. Email .po files
 * Moved options to Settings menu
 * Fixed deprecated permission settings (caused deprecated notices)
 Hat tip: Ben Gillbanks (http://twitter.com/binarymoon)
+* Turkish transaltion by Semih YEŞİLYURT (http://webdiliedebiyati.com)
 
 = 1.44 =
 * Fixed compatibility issue with Google Webmaster Tools.
