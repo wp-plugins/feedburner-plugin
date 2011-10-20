@@ -18,14 +18,17 @@ existing feeds simply become Feedburner feeds seamlessly and transparently for
 all users. Just tell the plugin what your Feedburner feed URL is and you're
 done.
 
+Available in these languages:
+English, Hungarian, German, Portuguese, Dutch, Italian, French, Turkish, Hebrew
+
 Translators: Use the .pot file in the languages/ folder. Email .po files
 (only) to me for inclusion in the plugin. Thank you!
 
 == Installation ==
 
-1. Copy fdfeedburner.php into wp-content/plugins
-1. Activate the plugin through the 'Plugins' menu in WordPress
-1. Configure your feed from the new Feedburner submenu
+1. Copy the feedburner-plugin folder into wp-content/plugins
+1. Activate the plugin through the 'Plugins'
+1. Configure your feed from the new Feedburner Settings submenu
 
 == Changelog ==
 
@@ -34,6 +37,7 @@ Translators: Use the .pot file in the languages/ folder. Email .po files
 * Fixed deprecated permission settings (caused deprecated notices)
 Hat tip: Ben Gillbanks (http://twitter.com/binarymoon)
 * Turkish transaltion by Semih YEŞİLYURT (http://webdiliedebiyati.com)
+* Hebrew translation by Sagive (http://www.sagive.co.il)
 
 = 1.44 =
 * Fixed compatibility issue with Google Webmaster Tools.
