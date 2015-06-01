@@ -32,6 +32,9 @@ Translators: Use the .pot file in the languages/ folder. Email .po files
 
 == Changelog ==
 
+= 1.47 =
+* Added Czech translation by Michal Stanke (http://www.mikk.cz/)
+
 = 1.46 =
 * Added "Do not redirect author feeds" option. Patch contributed by Robert McFrazier (lxbn.lexblog.com)
 * Translators: please update your translations to include the new author feeds message (msgid "Do not redirect author feeds") if you can. Thanks!
